@@ -1,0 +1,19 @@
+{
+    "en": {
+        "translation": {
+            "hero": {
+                "job": "Full-Stack Developer",
+                "description": "I build custom web solutions to meet your needs and goals"
+            },
+            "content": {
+                "about": "Enthusiastic Full Stack Developer, passionate about creating innovative digital solutions.<1/><1/>Using agile methology development, I make sure my projects stay up-to-date with the fast-moving market and include the newest tech advances.<1/>I most enjoy building software in the sweet spot where design and engineering meet — things that look good but are also built well under the hood.<1/><1/>When I'm not at the computer, I'm usually rock climbing, spending time with my dog, or skiing down the mountains."
+            },
+            "links": {
+                "about": "About",
+                "experiences": "Experiences",
+                "projects": "Projects"
+            }
+        }
+    }
+}
+  

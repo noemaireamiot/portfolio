@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html {
+    font-family: "Inter", sans-serif;
+    body {
+
+        .links {
+            cursor: pointer;
+            .link-container {
+                .link-line {
+                    display: block;
+                    height: 2px;
+                    width: 30px;
+                    opacity: 30;
+                    margin-top: 13px;
+                    margin-right: 10px;
+                    transition-property: width, opacity;
+                    transition-timing-function: cubic-bezier(.4,0,.2,1);
+                    transition-duration: .15s;
+
+                    }
+                    opacity: 0.3;
+    
+            }
+            :hover, .active {
+                .link-line {
+                    width: 60px;
+                }
+                opacity: 1;
+            }
+
+
+        }
+
+        /* The switch - the box around the slider */
+        #theme-toggle-button {
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        /* Hide default HTML checkbox */
+        #toggle {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        #container,
+        #patches,
+        #stars,
+        #button,
+        #sun,
+        #moon,
+        #cloud {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.25s;
+        }
+
+        /* night sky background */
+        #toggle:checked + svg #container {
+            fill: #2b4360;
+        }
+
+        /* move button to right when checked */
+        #toggle:checked + svg #button {
+            transform: translate(28px, 2.333px);
+        }
+
+        /* show/hide sun and moon based on checkbox state */
+        #sun {
+            opacity: 1;
+        }
+
+        #toggle:checked + svg #sun {
+            opacity: 0;
+        }
+
+        #moon {
+            opacity: 0;
+        }
+
+        #toggle:checked + svg #moon {
+            opacity: 1;
+        }
+
+        /* show or hide background items on checkbox state */
+        #cloud {
+            opacity: 1;
+        }
+
+        #toggle:checked + svg #cloud {
+            opacity: 0;
+        }
+
+        #stars {
+            opacity: 0;
+        }
+
+        #toggle:checked + svg #stars {
+            opacity: 1;
+        }
+    }
+
+    // Switch language
+    #switch-language {
+        background-color: #2B4360;
+        width: 56px;
+        height: 33px;
+        border-radius: 50px;
+        margin-top: 2px;
+
+        .fr-flag, .en-flag {
+            visibility: hidden;
+            position: absolute;
+            &.active {
+                visibility: visible;
+                opacity: 1;
+                &.en-flag {
+                    right: 23px;
+                }
+                &.fr-flag {
+                    right: 47px;
+                }
+
+                transition: all 0.1s linear;
+            }
+            
+            &.hidden-animation {
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0s 0.1s, opacity 0.1s linear;
+                &.en-flag {
+                    right: 47px;
+                }
+                &.fr-flag {
+                    right: 23px;
+                }
+            }
+        }
+    }
+}
