@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 interface DarkModeProps {
     isDark: boolean
     setIsDark: (isDark: boolean) => void

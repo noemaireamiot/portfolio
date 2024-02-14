@@ -1,0 +1,22 @@
+#jobs:hover .job-card {
+    opacity: 0.6;
+}
+
+#jobs {
+    .job-card {
+        transition: all 0.1s ease-in-out;
+        .arrow-new-tab {
+            transition: transform 0.1s ease-in-out;
+        }
+        &:hover {
+            background-color: rgba(100, 100, 100, 0.1);
+            opacity: 1;
+            .arrow-new-tab {
+                transform: translateY(-0.25rem) translateX(0.25rem);
+            }
+            .title-job {
+                color: #25b8bb
+            }
+        }
+    }
+}

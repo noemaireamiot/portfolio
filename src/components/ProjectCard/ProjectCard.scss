@@ -1,0 +1,30 @@
+#projects:hover .project-card {
+    opacity: 0.6;
+}
+
+#projects {
+    .project-card {
+        transition: all 0.1s ease-in-out;
+        .arrow-new-tab {
+            transition: transform 0.1s ease-in-out;
+        }
+
+        .project-tags {
+            .project-tag {
+                background-color: rgb(37, 184, 187, 0.1);
+                color: #25b8bb;
+            }
+        }
+
+        &:hover {
+            background-color: rgba(100, 100, 100, 0.1);
+            opacity: 1;
+            .arrow-new-tab {
+                transform: translateY(-0.25rem) translateX(0.25rem);
+            }
+            .title-project {
+                color: #25b8bb
+            }
+        }
+    }
+}

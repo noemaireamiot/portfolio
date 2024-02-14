@@ -11,6 +11,7 @@ export default {
       'secondary-dark': '#94a3b8',
       'light': '#0f172a',
       'secondary-light': '#1d2a47',
+      'tag': '#57DBD4',
     },
     extend: {},
   },

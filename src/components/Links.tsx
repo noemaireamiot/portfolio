@@ -24,21 +24,22 @@ const Links = () => {
     )
 
     return (
-        <div className="flex flex-col text-light dark:text-dark links mb-12">
+        <div className="flex flex-col text-light dark:text-dark links mb-6 md:mb-12">
             {links.map((link) => {
                 return (
                     <span
                         key={link.name}
-                        className={`link-container flex mb-3 ${
+                        className={`link-container mb-3 ${
                             link.url === currentHash ? 'active' : ''
                         }`}
                     >
-                        <span className="link-line bg-light dark:bg-dark" />
                         <AnchorLink
                             offset={link.url === '#about' ? '100' : '0'}
                             href={link.url}
                             onClick={() => setCurrentHash(link.url)}
+                            className="flex"
                         >
+                            <span className="link-line bg-light dark:bg-dark" />
                             {link.name}
                         </AnchorLink>
                     </span>

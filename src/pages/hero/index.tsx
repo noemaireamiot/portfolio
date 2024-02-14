@@ -8,17 +8,18 @@ const Hero = ({ className }: { className: string }) => {
 
     return (
         <div className={`${className}`}>
-            <div className="fixed">
+            <div className="md:fixed">
                 <h1 className="text-5xl font-bold mb-4">Noé Maire-Amiot</h1>
                 <h2 className="text-2xl font-semibold mb-4">{t('hero.job')}</h2>
-                <p className="text-secondary-light dark:text-secondary-dark mb-28">
+                <p className="text-secondary-light dark:text-secondary-dark mb-6 md:mb-28">
                     {t('hero.description')}
                 </p>
                 <Links />
-                <div>
+                <div className="mb-8">
                     <a
                         href="https://github.com/noemaireamiot"
                         target="_blank"
+                        rel="noreferrer"
                         className="mr-6"
                     >
                         <FontAwesomeIcon
@@ -30,6 +31,7 @@ const Hero = ({ className }: { className: string }) => {
                     <a
                         href="https://www.linkedin.com/in/noe-maireamiot/"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         <FontAwesomeIcon
                             className="opacity-50 hover:opacity-100"

@@ -7,10 +7,10 @@ const App = () => {
     return (
         <MovingHighlight>
             <div
-                className={`container mx-auto px-4 flex justify-between text-light dark:text-dark`}
+                className={`max-w-[1200px] mx-auto px-4 md:flex justify-between text-light dark:text-dark`}
             >
-                <Hero className="w-[48%]" />
-                <Content className="w-[48%]" />
+                <Hero className="w-full md:w-[48%]" />
+                <Content className="w-full md:w-[48%]" />
             </div>
         </MovingHighlight>
     )
