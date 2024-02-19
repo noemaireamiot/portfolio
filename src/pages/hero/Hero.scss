@@ -1,0 +1,10 @@
+.resume {
+    .arrow-new-tab {
+        transition: transform 0.1s ease-in-out;
+    }
+    &:hover {
+        .arrow-new-tab {
+            transform: translateY(-0.25rem) translateX(0.25rem);
+        }
+    }
+}

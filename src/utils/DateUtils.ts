@@ -25,15 +25,16 @@ export const DateUtils = {
     formatDateToStringInterval: (
         startDate: Date,
         endDate: Date,
+        locale: string
     ): string | null | undefined => {
         if (!startDate || !endDate) {
             return null
         }
 
-        return `${startDate.toLocaleDateString('fr-FR', {
+        return `${startDate.toLocaleDateString(locale, {
             year: 'numeric',
             month: 'short',
-        })} - ${endDate.toLocaleDateString('fr-FR', {
+        })} - ${endDate.toLocaleDateString(locale, {
             year: 'numeric',
             month: 'short',
         })}`

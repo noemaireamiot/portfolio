@@ -1,8 +1,10 @@
 import { DateUtils } from '@/utils/DateUtils'
 import '@/components/JobCard/JobCard.scss'
 import { jobInterface } from '@/types/job.interface'
+import { useTranslation } from 'react-i18next'
 
 const JobCard = ({ job }: { job: jobInterface }) => {
+    const { i18n } = useTranslation()
     return (
         <a
             className="flex flex-col md:flex-row job-card mt-4 cursor-pointer rounded px-0 md:px-5 py-3"
@@ -10,13 +12,14 @@ const JobCard = ({ job }: { job: jobInterface }) => {
             target="_blank"
             rel="noreferrer"
         >
-            <div className="w-full md:w-1/4 text-sm mb-3">
+            <div className="w-full md:w-2/6 text-sm mb-3">
                 {DateUtils.formatDateToStringInterval(
                     new Date(job['start-date']),
-                    new Date(job['end-date'])
+                    new Date(job['end-date']),
+                    i18n.language === 'fr' ? 'fr-fr' : 'en-gb'
                 )}
             </div>
-            <div className="w-full md:w-3/4 flex flex-col">
+            <div className="w-full md:w-4/6 flex flex-col">
                 <span className="text-lg text-light dark:text-dark font-semibold title-job">
                     {job.title[0].text}
                     <svg

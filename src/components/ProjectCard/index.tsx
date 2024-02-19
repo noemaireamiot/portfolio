@@ -9,10 +9,10 @@ const ProjectCard = ({ project }: { project: projectInterface }) => {
             target="_blank"
             rel="noreferrer"
         >
-            <div className="w-full md:w-1/4 md:pr-4 flex flex-col justify-center mb-3">
+            <div className="w-full md:w-2/6 md:pr-4 flex flex-col justify-center mb-3">
                 <img className="rounded" src={project.thumbnail.url} alt="" />
             </div>
-            <div className="w-full md:w-3/4 flex flex-col">
+            <div className="w-full md:w-4/6 flex flex-col">
                 <span className="text-lg text-light dark:text-dark font-semibold title-project">
                     {project.name[0].text}
                     <svg
